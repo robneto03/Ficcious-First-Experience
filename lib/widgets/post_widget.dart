@@ -1,7 +1,7 @@
 import 'package:first_experience/widgets/avatar_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class PostWidget extends StatelessWidget {
   @override
@@ -63,7 +63,22 @@ class PostWidget extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SvgPicture.asset(
+                    Icon(
+                      Icons.favorite_border_outlined,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                    Icon(
+                      Icons.chat_bubble_outline,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                    Icon(
+                      Icons.send,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                    /*SvgPicture.asset(
                       'assets/images/heart.svg',
                       width: 28,
                       color: Colors.white,
@@ -77,15 +92,20 @@ class PostWidget extends StatelessWidget {
                       'assets/images/share.svg',
                       width: 28,
                       color: Colors.white,
-                    ),
+                    ),*/
                   ],
                 ),
               ),
-              SvgPicture.asset(
+              Icon(
+                Icons.bookmark_border,
+                size: 30,
+                color: Colors.white,
+              ),
+              /*SvgPicture.asset(
                 'assets/images/save.svg',
                 width: 28,
                 color: Colors.white,
-              ),
+              ),*/
             ],
           ),
         ),

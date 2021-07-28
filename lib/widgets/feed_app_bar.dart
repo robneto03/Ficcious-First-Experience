@@ -4,43 +4,51 @@ import 'package:flutter_svg/flutter_svg.dart';
 class FeedAppBar extends StatelessWidget implements PreferredSize {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return AppBar(
       elevation: 0,
       backgroundColor: Colors.black,
       title: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+        padding: const EdgeInsets.only(top: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              width: 120,
-              height: 120,
+              width: size.width / 3.3,
               child: SvgPicture.asset(
                 'assets/images/logo.svg',
                 color: Colors.white,
               ),
             ),
             Container(
-              width: 140,
+              width: size.width / 3,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SvgPicture.asset(
+                  Icon(
+                    Icons.add_box_outlined,
+                    size: 30,
+                  ),
+                  Icon(
+                    Icons.favorite_border,
+                    size: 30,
+                  ),
+                  Icon(
+                    Icons.send,
+                    size: 30,
+                  ),
+                  /*SvgPicture.asset(
                     'assets/images/add.svg',
                     width: 24,
                     color: Colors.white,
                   ),
-                  Column(
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/heart.svg',
-                        width: 24,
-                        color: Colors.white,
-                      ),
-                    ],
+                  SvgPicture.asset(
+                    'assets/images/heart.svg',
+                    width: 24,
+                    color: Colors.white,
                   ),
                   SvgPicture.asset('assets/images/share.svg',
-                      width: 24, color: Colors.white),
+                      width: 24, color: Colors.white),*/
                 ],
               ),
             )
